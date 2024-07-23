@@ -1,0 +1,5 @@
+#!/bin/bash
+
+/home/gabriel/.tomcat/apache-tomcat-9.0.87/bin/catalina.sh run &
+mvn tomcat7:redeploy
+mysql -u root -p'root' -D T1 < db/create.sql
