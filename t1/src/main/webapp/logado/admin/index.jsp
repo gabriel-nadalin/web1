@@ -19,7 +19,7 @@
                 <a href="${pageContext.request.contextPath}/clientes"><fmt:message key="clients.entity" /></a>
             </li>
             <li>
-                <a href="imobiliarias"><fmt:message key="agencies.entity" /></a>
+                <a href="${pageContext.request.contextPath}/imobiliarias"><fmt:message key="agencies.entity" /></a>
             </li>
         </ul>
     </body>

@@ -38,6 +38,21 @@ public class ClienteCRUDController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        Usuario usuario = (Usuario) request.getSession().getAttribute("usuarioLogado");
+    	Erro erros = new Erro();
+    	if (usuario == null) {
+            response.sendRedirect(request.getContextPath() + "/login.jsp");
+            return;
+        }
+
+        if (!"ADMIN".equals(usuario.getPapel())) {
+            erros.add("Acesso não autorizado!");
+            erros.add("Apenas Papel [ADMIN] tem acesso a essa página");
+            request.setAttribute("mensagens", erros);
+            RequestDispatcher rd = request.getRequestDispatcher("/noAuth.jsp");
+            rd.forward(request, response);
+            return;
+        }
         
         String action = request.getPathInfo();
         if (action == null) {
