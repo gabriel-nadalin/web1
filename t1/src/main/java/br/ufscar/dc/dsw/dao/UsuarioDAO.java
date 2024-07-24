@@ -14,7 +14,7 @@ public class UsuarioDAO extends GenericDAO {
 
     public void insert(Usuario usuario) {
 
-        String sql = "INSERT INTO usuario (nome, email, senha, papel) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO usuario (email, senha, nome, papel) VALUES (?, ?, ?, ?)";
 
         try {
             Connection conn = this.getConnection();
@@ -51,7 +51,7 @@ public class UsuarioDAO extends GenericDAO {
                 String email = resultSet.getString("email");
                 String senha = resultSet.getString("senha");
                 String papel = resultSet.getString("papel");
-                Usuario usuario = new Usuario(id, nome, email, senha, papel);
+                Usuario usuario = new Usuario(id, email, senha, nome, papel);
                 listaUsuarios.add(usuario);
             }
 
@@ -117,7 +117,7 @@ public class UsuarioDAO extends GenericDAO {
                 String senha = resultSet.getString("senha");
                 String papel = resultSet.getString("papel");
 
-                usuario = new Usuario(id, nome, email, senha, papel);
+                usuario = new Usuario(id, email, senha, nome, papel);
             }
 
             resultSet.close();
@@ -146,7 +146,7 @@ public class UsuarioDAO extends GenericDAO {
                 String senha = resultSet.getString("senha");
                 String papel = resultSet.getString("papel");
 
-                usuario = new Usuario(id, nome, email, senha, papel);
+                usuario = new Usuario(id, email, senha, nome, papel);
             }
 
             resultSet.close();

@@ -46,13 +46,13 @@ insert into usuario(email, senha, nome, papel)
     values ('admin', 'admin', 'Admin', 'ADMIN');
 
 insert into usuario(email, senha, nome, papel)
-    values ('aaaaaaaa@gmail.com', 'senha', 'aaaaaaaaa', 'CLIENTE');
+    values ('aaaaaaaa@gmail.com', 'senha', 'aaaaaaaaa', 'CLIENT');
 
 insert into cliente(id_usuario, cpf, telefone, sexo, data_nascimento)
     values ('2', '747.285.293-79', '99574-3211', 'masculino', '17/07/1990');
 
 insert into usuario(email, senha, nome, papel)
-    values ('bbbbbbbb@gmail.com', 'senha', 'bbbbbbbbb', 'CLIENTE');
+    values ('bbbbbbbb@gmail.com', 'senha', 'bbbbbbbbb', 'CLIENT');
 
 insert into cliente(id_usuario, cpf, telefone, sexo, data_nascimento)
     values ('3', '857.483.953-25', '3948-2859', 'masculino', '27/11/2002');

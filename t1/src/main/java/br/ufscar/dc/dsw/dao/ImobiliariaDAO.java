@@ -23,7 +23,7 @@ public class ImobiliariaDAO extends GenericDAO {
             statementUsuario.setString(1, imobiliaria.getEmail());
             statementUsuario.setString(2, imobiliaria.getSenha());
             statementUsuario.setString(3, imobiliaria.getNome());
-            statementUsuario.setString(4, "imobiliaria");
+            statementUsuario.setString(4, "AGENCY");
             statementUsuario.executeUpdate();
 
             ResultSet generatedKeys = statementUsuario.getGeneratedKeys();

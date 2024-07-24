@@ -24,7 +24,7 @@ public class ClienteDAO extends GenericDAO {
             statementUsuario.setString(1, cliente.getEmail());
             statementUsuario.setString(2, cliente.getSenha());
             statementUsuario.setString(3, cliente.getNome());
-            statementUsuario.setString(4, "cliente");
+            statementUsuario.setString(4, "CLIENT");
             statementUsuario.executeUpdate();
 
             ResultSet generatedKeys = statementUsuario.getGeneratedKeys();
